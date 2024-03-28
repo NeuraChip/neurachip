@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/dramsim3main.dir/src/main.cc.o CMakeFiles/dramsim3main.dir/src/cpu.cc.o -o dramsim3main  -Wl,-rpath,/home/ktb/scratch/src/DRAMsim3-1.0.0 /home/ktb/scratch/src/DRAMsim3-1.0.0/libdramsim3.so 
