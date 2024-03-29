@@ -1,0 +1,10 @@
+*.ipynb
+zipped_data/
+ss_dataset/
+snap/
+data/
+figures/
+plots/
+plots2/
+__pycache__/
+.vscode/
