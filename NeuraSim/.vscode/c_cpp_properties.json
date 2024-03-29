@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "/home/ktb/git/NeuraChip/DRAMsim3-1.0.0/src",
+                "/home/ktb/git/NeuraChip/DRAMsim3-1.0.0/ext/fmt/include",
+                "/home/ktb/git/NeuraChip/DRAMsim3-1.0.0/ext/headers",
+                "/opt/mongo-cxx-driver/include/mongocxx/v_noabi",
+                "/opt/mongo-cxx-driver/include/bsoncxx/v_noabi"
+            ],
+            "defines": [],
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

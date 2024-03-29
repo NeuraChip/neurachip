@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"*.embeddedhtml": "html",
+		"*.cu": "cpp",
+		"new": "cpp",
+		"vector": "cpp",
+		"map": "cpp",
+		"iosfwd": "cpp",
+		"iostream": "cpp",
+		"ostream": "cpp"
+	}
+}
