@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	ArgParse arg_parse(argc, argv);
 
 	// For SPAM protection, comment out to disable SPAM protection.
-	host_notify(&arg_parse);
+	// host_notify(&arg_parse);
 
 	greetings();
 	// cout << "Experiment Name: " << arg_parse.get_exp_name() << endl;

@@ -37,8 +37,5 @@ RUN echo "zsh" >> /root/.bashrc
 # Allow exec and shell_exec
 RUN echo 'disable_functions =' > /usr/local/etc/php/conf.d/enable-exec.ini
 
-
-
 EXPOSE 80
 EXPOSE 443
-

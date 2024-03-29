@@ -21,7 +21,7 @@ DRAM_SIM_INC=-I$(DRAM_SIM_SRC_DIR) -I$(FMT_LIB_DIR) -I$(INI_LIB_DIR) -I$(ARGS_LI
 DRAM_SIM_CXXFLAGS=-std=c++11 -DFMT_HEADER_ONLY=1
 #-fPIC
 
-BOOST_INC=-I/home/ktb/git/neurachip_deploy/softwares/boost/boost_1_81_0
+BOOST_INC=-I../softwares/boost/boost_1_81_0
 
 # ASAN_FLAGS=-fsanitize=address -static-libasan
 ASAN_FLAGS=
