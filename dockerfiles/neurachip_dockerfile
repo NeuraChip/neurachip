@@ -1,0 +1,44 @@
+# Use the official Apache HTTP Server image as the base
+FROM php:7.4-apache
+
+# Update package list and install necessary packages
+RUN apt-get update && apt-get install -y \
+    libssl-dev \
+    pkg-config \
+    # For pecl
+    autoconf \
+    g++ \
+    make \
+    openssl \
+    libcurl4-openssl-dev
+
+# Install the MongoDB extension
+RUN pecl install mongodb \
+    && docker-php-ext-enable mongodb
+
+# Set the working directory in the container
+WORKDIR /root
+
+# Install necessary packages including Python pip
+RUN apt-get update && apt-get install -y \
+    vim \
+    git \
+    curl \
+    wget \
+    zsh \
+    nmap
+
+# Install oh-my-zsh
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Add Zsh to the end of ~/.bashrc
+RUN echo "zsh" >> /root/.bashrc
+
+# Allow exec and shell_exec
+RUN echo 'disable_functions =' > /usr/local/etc/php/conf.d/enable-exec.ini
+
+
+
+EXPOSE 80
+EXPOSE 443
+
