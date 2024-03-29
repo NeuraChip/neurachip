@@ -1,5 +1,0 @@
-/home/ktb/scratch/src/DRAMsim3-1.0.0/build/CMakeFiles/dramsim3.dir
-/home/ktb/scratch/src/DRAMsim3-1.0.0/build/CMakeFiles/dramsim3main.dir
-/home/ktb/scratch/src/DRAMsim3-1.0.0/build/CMakeFiles/dramsim3test.dir
-/home/ktb/scratch/src/DRAMsim3-1.0.0/build/CMakeFiles/edit_cache.dir
-/home/ktb/scratch/src/DRAMsim3-1.0.0/build/CMakeFiles/rebuild_cache.dir
