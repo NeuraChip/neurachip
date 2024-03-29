@@ -1,0 +1,10 @@
+name,B
+x_dim,2708
+y_dim,1433
+type,CSR_CSC
+nnz,49216
+row_ptr_address,148344
+col_indices_address,159180
+data_address,356044
+col_ptr_address,552908
+row_indices_address,558644

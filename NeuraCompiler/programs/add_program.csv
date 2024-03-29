@@ -1,0 +1,5 @@
+instx,result,operand_1,operand_2
+ADD_FLOAT_32,32,0,16
+ADD_FLOAT_32,36,4,20
+ADD_FLOAT_32,40,8,24
+ADD_FLOAT_32,44,12,28
