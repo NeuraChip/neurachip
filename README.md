@@ -40,14 +40,17 @@ sudo -u mongodb mongod --config /etc/mongod.conf --fork
 
 ### NeuraChip
 
+Change directory to NeuraSim
 ```bash
 cd /home/ktb/git/NeuraChip/NeuraSim
 ```
 
+Compile NeuraSim
 ```bash
 ./compile_run.sh
 ```
 
+Run NeuraChip Simulation
 ```bash
 ./chippy.bin
 ```
