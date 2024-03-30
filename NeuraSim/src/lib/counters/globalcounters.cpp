@@ -821,7 +821,7 @@ void GlobalCounters::set_sim_start_time()
 
 void GlobalCounters::print_sim_speed()
 {
-	cout << "Sim Speed: " << GREEN_START << (int)(this->interval_cps / 1000) << COLOR_RESET << " Kilo Cycles Per Second    ";
+	cout << "Sim Speed: " << GREEN_START << (int)(this->interval_cps) << COLOR_RESET << " Cycles Per Second    ";
 	cout << "Cycles Completed: ";
 	this->cycle_printer();
 	cout << endl;
