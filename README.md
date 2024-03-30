@@ -48,5 +48,11 @@ sudo -u mongodb mongod --config /etc/mongod.conf --fork
 ### NeuraChip
 
 ```bash
-cd
-/home/ktb/git/NeuraChip
+cd /home/ktb/git/NeuraChip/NeuraSim
+
+```bash
+./compile_run.sh
+
+```bash
+./chippy.bin
+

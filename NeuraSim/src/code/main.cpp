@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	// cout << "Experiment Name: " << arg_parse.get_exp_name() << endl;
 	// return 0;
 
-	arg_parse.print();
+	// arg_parse.print();
 
 	// Set omp threads
 	// omp_set_num_threads(32);
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	post_sim(neura_tile);
 
 	// cout << "Launch Visualizer" << endl;
-	launch_visualizer_script(neura_tile);
+	// launch_visualizer_script(neura_tile);
 
 	// cout << "Cleanup" << endl;
 	sim_cleanup(neura_tile);
