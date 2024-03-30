@@ -29,15 +29,8 @@ The commands below are to be executed inside the container.
 NeuraSim requires a MongoDB instance to store the simulation results.
 So we need to start a MongoDB instance.
 
-#### Not using WSL, 
 
-You likely have systemd, so you can start it with:
-
-```bash
-systemctl start mongod
-```
-
-#### Mongo DB on WSL
+#### Mongo DB Server Launch
 
 Must be started on the background with:
 
@@ -49,10 +42,13 @@ sudo -u mongodb mongod --config /etc/mongod.conf --fork
 
 ```bash
 cd /home/ktb/git/NeuraChip/NeuraSim
+```
 
 ```bash
 ./compile_run.sh
+```
 
 ```bash
 ./chippy.bin
+```
 
