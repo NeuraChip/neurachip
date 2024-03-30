@@ -1199,21 +1199,24 @@ bool NeuraTile::tick()
 	// the components create data and the connections send data.
 	// We dont send data in the same cycle that we create it.
 
-	for (size_t i = 0; i < this->conn_array.size(); i++)
+	for (auto conn_tick = 0; conn_tick < MULTI_TICK_CONN; conn_tick++)
 	{
-		// cout << "Ticking Connection [" << i << "]" << endl;
-		tick_output = this->conn_array[i]->tick();
-		sim_end = sim_end && tick_output;
+		for (size_t i = 0; i < this->conn_array.size(); i++)
+		{
+			// cout << "Ticking Connection [" << i << "]" << endl;
+			tick_output = this->conn_array[i]->tick();
+			sim_end = sim_end && tick_output;
+		}
 	}
 
-#ifdef DUAL_TX_CONN
-	for (size_t i = 0; i < this->conn_array.size(); i++)
-	{
-		// cout << "Ticking Connection [" << i << "]" << endl;
-		tick_output = this->conn_array[i]->tick();
-		sim_end = sim_end && tick_output;
-	}
-#endif // DUAL_TX_CONN
+// #ifdef DUAL_TX_CONN
+// 	for (size_t i = 0; i < this->conn_array.size(); i++)
+// 	{
+// 		// cout << "Ticking Connection [" << i << "]" << endl;
+// 		tick_output = this->conn_array[i]->tick();
+// 		sim_end = sim_end && tick_output;
+// 	}
+// #endif // DUAL_TX_CONN
 
 	// #pragma omp parallel for
 	for (int component_id = 0; component_id < 6; component_id++)
@@ -1245,6 +1248,8 @@ bool NeuraTile::tick()
 			// Tick all cores
 			bool core_sim_end = true;
 			// #pragma omp parallel for collapse(2) reduction(&& : core_sim_end)
+			for (auto c_tick = 0; c_tick < MULTI_TICK_NEURACORE; c_tick++)
+			{
 			for (auto i = 0; i < this->core_x_count; i++)
 			{
 				for (auto j = 0; j < this->core_y_count; j++)
@@ -1253,6 +1258,7 @@ bool NeuraTile::tick()
 					bool core_tick_output = this->core_array[i][j].tick();
 					core_sim_end = core_sim_end && core_tick_output;
 				}
+			}
 			}
 			this->component_sim_end_array[CORE_COMPONENT_INDEX] = core_sim_end;
 		}
@@ -1333,8 +1339,12 @@ bool NeuraTile::tick()
 
 			// Tick Memory Controller
 			bool mc_sim_end = true;
-			bool mc_tick_output = this->mem_controller_array[this->id].tick();
-			// mc_sim_end = mc_sim_end && mc_tick_output;
+			for (auto mc_tick = 0; mc_tick < MULTI_TICK_MC; mc_tick++)
+			{
+				bool mc_tick_output = this->mem_controller_array[this->id].tick();
+				// mc_sim_end = mc_sim_end && mc_tick_output;
+			}
+			
 
 			this->component_sim_end_array[MC_COMPONENT_INDEX] = mc_sim_end;
 		}

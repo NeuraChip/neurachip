@@ -110,7 +110,7 @@ bool HashRequest::is_ready_to_process() {
 
 void HashRequest::inc_reg_file_time() {
     this->reg_file_time++;
-    if (this->reg_file_time > 100000 && this->error_printed == false) {
+    if (this->reg_file_time > HASH_REQ_ALERT_THRESHOLD && this->error_printed == false) {
         cout << "HashRequest spent more than 100000 cycles in core" << endl;
         this->print();
         this->error_printed = true;

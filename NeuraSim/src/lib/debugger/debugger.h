@@ -19,6 +19,8 @@
 // #define CYAN( x ) "\e[1;36m"#x"\e[0m"
 // #define WHITE( x ) "\e[1;37m"#x"\e[0m"
 
+#define ENABLE_COLORS
+
 #ifdef ENABLE_COLORS
     #define RED_START "\e[1;31m"
     #define GREEN_START "\e[1;32m"

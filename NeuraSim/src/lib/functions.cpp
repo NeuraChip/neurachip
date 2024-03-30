@@ -203,7 +203,7 @@ void sim_cleanup(NeuraTile *neura_tile)
 	string preprend_text = "<div class=\"col-12 grid-margin\">  <div class=\"card\"> <div class=\"card-body\"> <div id=\"sim_completed_last\" class=\"text-center\"> ";
 	string append_text = " </div> </div> </div> </div>";
 	string html = preprend_text + button + append_text;
-	cout << html << endl;
+	// cout << html << endl;
 
 }
 
@@ -234,11 +234,11 @@ void greetings()
 	// cout << "|__/  \\__/ \\_______/ \\______/ |__/      \\_______/ \\______/ |__/|__/ |__/ |__/" << endl;
 	
 	cout << endl;
-	cout << "<h1 class=\"display-3\">";
+	// cout << "<h1 class=\"display-3\">";
 	cout << RED_START << "Neura" << COLOR_RESET;
 	cout << GREEN_START << "Chip" << COLOR_RESET;
 	cout << " Labs";
-	cout << " </h1>" << endl;
+	// cout << " </h1>" << endl;
 	cout << endl << endl;
 }
 
