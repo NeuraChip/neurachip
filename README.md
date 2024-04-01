@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/778455515.svg)](https://zenodo.org/doi/10.5281/zenodo.10896279)
+
 # NeuraChip
 
 NeuraChip is a GNN accelerator that is built using the NeuraSim simulator. NeuraSim is a cycle accurate simulator that contains six modules as follows:
